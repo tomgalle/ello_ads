@@ -59,7 +59,6 @@ if (origin === 'https://ello.co') {
 		'z-index' : '10000000000'
 	});
 
-
 }
 
 else {

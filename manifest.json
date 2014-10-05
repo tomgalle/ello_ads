@@ -13,7 +13,6 @@
   "browser_action": {
     "default_icon": "icons/icon19.png",
     "default_title": "ELLO ADS"
-    // "browser Action": "chrome.browserAction.onClicked.addListener(function(tab) { alert('icon clicked')});"
   },
   "content_scripts": [
     {
