@@ -10,9 +10,9 @@ if (origin === 'https://ello.co') {
 
      // create ads and appending them to body
 
-     body.append('<div class="ad1"></ad>');
-     body.append('<div class="ad2"></ad>');
-     body.append('<div class="ad3"></ad>');
+	body.append('<div class="ad1"><img src="http://affiliate.rakuten.co.jp/campaign/travel/20101210/img/main_ttl.jpg"></ad>');
+	body.append('<div class="ad2"><img src="http://affiliate.rakuten.co.jp/campaign/travel/20101210/img/main_ttl.jpg"></ad>');
+	body.append('<div class="ad3"><img src="http://affiliate.rakuten.co.jp/campaign/travel/20101210/img/main_ttl.jpg"></ad>');
 
 
      $('.ad1').css({
