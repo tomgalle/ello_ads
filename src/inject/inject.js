@@ -3,16 +3,18 @@ var origin = window.location.origin;
 console.log('this is the origin:' + ' ' + origin);
 console.log('this is the window.location:' + ' ' + window.location);
 var body = $('body');
+var nm =1;
     
 if (origin === 'https://ello.co') {
 
-     console.log('adding ads');
+
+	body.append('<div class="ad1"></ad>');
+	body.append('<div class="ad2"></ad>');
+	body.append('<div class="ad3"></ad>');
 
      // create ads and appending them to body
 
-	body.append('<div class="ad1"><img src="http://affiliate.rakuten.co.jp/campaign/travel/20101210/img/main_ttl.jpg"></ad>');
-	body.append('<div class="ad2"><img src="http://affiliate.rakuten.co.jp/campaign/travel/20101210/img/main_ttl.jpg"></ad>');
-	body.append('<div class="ad3"><img src="http://affiliate.rakuten.co.jp/campaign/travel/20101210/img/main_ttl.jpg"></ad>');
+
 
 
      $('.ad1').css({
@@ -44,9 +46,29 @@ if (origin === 'https://ello.co') {
           'right' : '100' + 'px',
           'z-index' : '10000000000'
      });
+	putAd();
 
 }
 
 else {
      // alert('youre NOT on ello!');
+}
+
+
+
+function putAd(){
+	if(nm<=3){
+		$.ajax({
+			type : 'GET',
+			// dataType: 'json',
+			url : "http://www.shiroari.com/elload/ad.php",
+			cache : false,
+			success : function(data) {
+				document.getElementsByClassName("ad"+nm)[0].innerHTML = data;
+				
+				nm +=1;
+				putAd();
+			}
+		});
+	}
 }
