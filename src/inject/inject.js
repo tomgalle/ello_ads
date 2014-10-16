@@ -20,7 +20,6 @@ if (origin === 'https://ello.co') {
      $('.ad1').css({
           'width' : 400,
           'height' : 80,
-          'background-color': 'red',
           'position' : 'absolute',
           'top' : '350' + 'px',
           'left' : '30' + 'px',
@@ -30,7 +29,6 @@ if (origin === 'https://ello.co') {
      $('.ad2').css({
           'width' : 300,
           'height' : 300,
-          'background-color': 'orange',
           'position' : 'absolute',
           'top' : '480' + 'px',
           'left' : '30' + 'px',
@@ -40,7 +38,6 @@ if (origin === 'https://ello.co') {
      $('.ad3').css({
           'width' : 100,
           'height' : 500,
-          'background-color': 'gray',
           'position' : 'absolute',
           'top' : '100' + 'px',
           'right' : '100' + 'px',
