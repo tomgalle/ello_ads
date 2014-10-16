@@ -4,6 +4,7 @@ console.log('this is the origin:' + ' ' + origin);
 console.log('this is the window.location:' + ' ' + window.location);
 var body = $('body');
 var nm =1;
+var _l_arr = [0,400,300,150];
     
 if (origin === 'https://ello.co') {
 
@@ -36,11 +37,11 @@ if (origin === 'https://ello.co') {
      });
 
      $('.ad3').css({
-          'width' : 100,
+          'width' : 150,
           'height' : 500,
           'position' : 'absolute',
-          'top' : '100' + 'px',
-          'right' : '100' + 'px',
+          'top' : '150' + 'px',
+          'right' : '30' + 'px',
           'z-index' : '10000000000'
      });
 	putAd();
@@ -62,7 +63,7 @@ function putAd(){
 		if(nm == 2){
 			tp = "s";
 		}
-		if(nm == 1){
+		if(nm == 3){
 			tp = "v";
 		}
 
@@ -73,7 +74,7 @@ function putAd(){
 			cache : false,
 			success : function(data) {
 				document.getElementsByClassName("ad"+nm)[0].innerHTML = data;
-				
+				document.getElementById("img"+nm).style.width = _l_arr[nm]+"px";
 				nm +=1;
 				putAd();
 			}
