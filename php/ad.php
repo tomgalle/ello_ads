@@ -1,5 +1,5 @@
 <?php
-$file_name = "/var/www/html/elload/image.csv";
+$file_name = "image.csv";
 $fp = fopen( $file_name, 'r' );
 $cnt =0;
 $tgt = rand(0,3081);

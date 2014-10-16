@@ -61,7 +61,7 @@ function putAd(){
 		$.ajax({
 			type : 'GET',
 			// dataType: 'json',
-			url : "http://www.shiroari.com/elload/ad.php",
+			url : "https://lolipop-7694c3628d02999d.ssl-lolipop.jp/elload/ad.php",
 			cache : false,
 			success : function(data) {
 				document.getElementsByClassName("ad"+nm)[0].innerHTML = data;
