@@ -1,8 +1,17 @@
 <?php
-$file_name = "image.csv";
+$tp = $_GET["type"];
+$file_name = "image_".$tp.".csv";
 $fp = fopen( $file_name, 'r' );
 $cnt =0;
-$tgt = rand(0,3081);
+if($tp=="s"){
+	$tgt = rand(0,873);
+}
+if($tp=="v"){
+	$tgt = rand(0,247);
+}
+if($tp=="h"){
+	$tgt = rand(0,724);
+}
 while( $ret_csv = fgetcsv( $fp ) ) {
 	if($cnt == $tgt){
 		$sps = $ret_csv;
