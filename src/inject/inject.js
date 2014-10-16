@@ -58,10 +58,21 @@ else {
 
 function putAd(){
 	if(nm<=3){
+		var tp;
+		if(nm == 1){
+			tp = "h";
+		}
+		if(nm == 2){
+			tp = "s";
+		}
+		if(nm == 1){
+			tp = "v";
+		}
+
 		$.ajax({
 			type : 'GET',
 			// dataType: 'json',
-			url : "https://lolipop-7694c3628d02999d.ssl-lolipop.jp/elload/ad.php",
+			url : "https://lolipop-7694c3628d02999d.ssl-lolipop.jp/elload/ad.php?type="+tp,
 			cache : false,
 			success : function(data) {
 				document.getElementsByClassName("ad"+nm)[0].innerHTML = data;
