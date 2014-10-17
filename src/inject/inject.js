@@ -75,6 +75,15 @@ function putAd(){
 			success : function(data) {
 				document.getElementsByClassName("ad"+nm)[0].innerHTML = data;
 				document.getElementById("img"+nm).style.width = _l_arr[nm]+"px";
+				if(nm==3){
+					var style = window.getComputedStyle(document.getElementById("img1"),"");
+					//console.log(style.height);
+					var div_style = window.getComputedStyle(document.getElementsByClassName("ad1")[0],"");
+					//console.log(div_style.top);
+					var num = (parseInt(div_style.top.split("px")[0])+parseInt(style.height.split("px")[0])+30)+"px";
+					document.getElementsByClassName("ad2")[0].style.top = num;
+					//console.log(num);
+				}
 				nm +=1;
 				putAd();
 			}
